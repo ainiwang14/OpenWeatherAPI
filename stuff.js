@@ -20,32 +20,32 @@ $(document).ready(function () {
     //function w/ for loop to make 5 divs and append weather in forecast
 
     //grab input from submission box
-    // const btn = $(".btn")
+    const btn = $(".btn")
     
-    // function grabInputCity () {
-    //     btn.click(() => {
-    //         event.preventDefault();
-    //         const inputCity = $("#inputCity");
-    //         console.log(inputCity)
-    //         })
-    //      return inputCity
-    // }
-
-    // grabInputCity()
-    
-    //function to use input from submission to geocode
-    function cityToGeolocation() {
-        let url = `https://api.opencagedata.com/geocode/v1/json?q=${inputCity}&key=6d0e711d72d74daeb2b0bfd2a5cdfdba`
-
-        $.ajax({
-            url,
-            method: "GET"
-        }).then(response => {
-                    console.log(response, "geoLocation")
-                })
+    function grabInputCity () {
+        btn.click(() => {
+            event.preventDefault();
+            const inputCity = $("#inputCity")[0].value;
+            console.log(inputCity)
+            })
     }
 
-    cityToGeolocation()
+    grabInputCity()
+    
+    //function to use input from submission to geocode
+    // function cityToGeolocation() {
+    //     let url = `https://api.opencagedata.com/geocode/v1/json?q=${inputCity}&key=6d0e711d72d74daeb2b0bfd2a5cdfdba`
+    //     // don't forget to change api key to f7c536952d884e97baeb7a8948d115a0
+
+    //     $.ajax({
+    //         url,
+    //         method: "GET"
+    //     }).then(response => {
+    //                 console.log(response, "geoLocation")
+    //             })
+    // }
+
+    // cityToGeolocation()
 
     // function getGeolocation() {
 
